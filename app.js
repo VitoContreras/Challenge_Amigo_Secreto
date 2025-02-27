@@ -24,12 +24,12 @@ function agregarAmigo() {
         asignarTextoElemento('resultado', 'Ingresa un nombre válido por favor.');
         return;
     } else if (amigos.includes(nombre)) { 
-        asignarTextoElemento('resultado', 'El nombre ya está en la lista.');
+        asignarTextoElemento('resultado', 'El nombre ya está en la lista, ingresa un nombre por favor.');
         return;
     }
     amigos.push(nombre);
     actualizarListaAmigos();
-    asignarTextoElemento('resultado', `✅ Se agregó: ${nombre}`);
+    asignarTextoElemento('resultado', `Se agregó: ${nombre}`);
     inputAmigo.value = '';
 }
 
@@ -53,7 +53,9 @@ function sortearAmigo() {
     }
 
     let ganador = amigos[Math.floor(Math.random() * amigos.length)];
-    asignarTextoElemento('resultado', `El amigo secreto es: ${ganador}`);
+    asignarTextoElemento('resultado', `¡¡¡El amigo secreto es: ${ganador}!!!`);
 }
+
+
 
 
